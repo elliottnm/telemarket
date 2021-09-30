@@ -27,6 +27,23 @@ GRAPHICS-WINDOW
 ticks
 30.0
 
+BUTTON
+60
+90
+123
+123
+NIL
+hello
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
 @#$#@#$#@
 # THE TELEMARKETER MODEL
 
@@ -409,7 +426,7 @@ false
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 @#$#@#$#@
-NetLogo 6.1.0
+NetLogo 6.2.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
