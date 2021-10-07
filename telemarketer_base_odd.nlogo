@@ -1,11 +1,11 @@
-
 turtles-own [ balance sales ]
 
 
 to setup
+  ca
   reset-ticks
 
-  crt 200
+  crt num-marketers
   ask turtles
   [ setxy random-xcor random-ycor
     set balance 0
@@ -62,7 +62,6 @@ to update
   [ die ]
 
 end
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 235
@@ -141,6 +140,21 @@ NIL
 NIL
 NIL
 1
+
+SLIDER
+25
+225
+197
+258
+num-marketers
+num-marketers
+50
+500
+450.0
+50
+1
+NIL
+HORIZONTAL
 
 @#$#@#$#@
 # THE TELEMARKETER MODEL
@@ -528,6 +542,14 @@ NetLogo 6.2.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
+<experiments>
+  <experiment name="experiment" repetitions="10" runMetricsEveryStep="true">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>count turtles</metric>
+    <steppedValueSet variable="num-marketers" first="50" step="50" last="500"/>
+  </experiment>
+</experiments>
 @#$#@#$#@
 @#$#@#$#@
 default

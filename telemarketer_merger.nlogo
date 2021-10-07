@@ -2,6 +2,7 @@ turtles-own [ balance sales parent ]
 
 
 to setup
+  ca
   reset-ticks
 
   crt 200

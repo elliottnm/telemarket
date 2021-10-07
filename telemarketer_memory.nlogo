@@ -3,9 +3,9 @@ patches-own [ memory tolerance ]
 
 
 to setup
+  ca
   reset-ticks
-
-  crt 200
+  crt num-marketers
   ask turtles
   [ setxy random-xcor random-ycor
     set balance 0
@@ -75,6 +75,7 @@ to-report let-call? [ caller ]
   let num-calls length filter
   [ a-caller -> a-caller = caller ] memory
   set memory fput caller memory
+  set pcolor red
   report num-calls <= tolerance
 end
 @#$#@#$#@
@@ -155,6 +156,21 @@ NIL
 NIL
 NIL
 1
+
+SLIDER
+45
+235
+217
+268
+num-marketers
+num-marketers
+50
+500
+50.0
+50
+1
+NIL
+HORIZONTAL
 
 @#$#@#$#@
 # THE TELEMARKETER MODEL
@@ -542,6 +558,14 @@ NetLogo 6.2.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
+<experiments>
+  <experiment name="experiment" repetitions="1" sequentialRunOrder="false" runMetricsEveryStep="true">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>count turtles</metric>
+    <steppedValueSet variable="num-marketers" first="50" step="50" last="500"/>
+  </experiment>
+</experiments>
 @#$#@#$#@
 @#$#@#$#@
 default

@@ -3,6 +3,7 @@ patches-own [ memory tolerance ]
 
 
 to setup
+  ca
   reset-ticks
 
   crt 200
